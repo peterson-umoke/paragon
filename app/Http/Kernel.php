@@ -63,8 +63,10 @@ class Kernel extends HttpKernel
         'password.confirm' => \Illuminate\Auth\Middleware\RequirePassword::class,
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+//        'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         "inertia.admin" => \App\Http\Middleware\HandleInertiaRequests_Admin::class,
         "inertia.user" => \App\Http\Middleware\HandleInertiaRequests_User::class,
+        'verified.admin' => \App\Http\Middleware\EnsureEmailIsVerified_Admin::class,
+        'verified' => \App\Http\Middleware\EnsureEmailIsVerified_User::class,
     ];
 }
