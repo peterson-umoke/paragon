@@ -1,5 +1,7 @@
 const mix = require('laravel-mix');
 
+require('laravel-mix-merge-manifest');
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -19,7 +21,8 @@ mix
         require('tailwindcss'),
         require('autoprefixer'),
     ])
-    .webpackConfig(require('./webpack.config'));
+    .webpackConfig(require('./webpack.config'))
+    .mergeManifest();
 
 if (mix.inProduction()) {
     mix.version();

@@ -4183,6 +4183,13 @@ laravel-echo@^1.10.0:
   resolved "https://registry.yarnpkg.com/laravel-echo/-/laravel-echo-1.10.0.tgz#b7a3615baf563fadfe242589ad1e302acc931dad"
   integrity sha512-qshJkrzl34on1VYd8KqZhLxUdWJFPTL6cGSZ4lVQ4OZMN7FvI9Pt24PrOFL169I8IEDHjHX16jaIAIwCkdnDNA==
 
+laravel-mix-merge-manifest@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/laravel-mix-merge-manifest/-/laravel-mix-merge-manifest-2.0.0.tgz#e4e4273998f6693931f5d851d52456bea6cdf545"
+  integrity sha512-2UYjNCoGlRYFj8OKFupEFyGt4BMMMI4Ncc3gnY+FXgZZfqSk7wWppP7L11E0Y93eCATKmsXqnGDzDbd0qMHfKg==
+  dependencies:
+    lodash "^4.17.4"
+
 laravel-mix@^6.0.6:
   version "6.0.19"
   resolved "https://registry.yarnpkg.com/laravel-mix/-/laravel-mix-6.0.19.tgz#4de8fa5c1cdd886db380a1f634bf9b3c3aff15af"
@@ -4311,7 +4318,7 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@^4.17.14, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21:
+lodash@^4.17.14, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.4:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
