@@ -6,26 +6,29 @@ use App\Http\Controllers\Admin\Auth\EmailVerificationPromptController;
 use App\Http\Controllers\Admin\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
+Route::prefix('admin')
+    ->name("admin.")
+    ->group(static function (\Illuminate\Routing\Router $router) {
+        $router->get('/login', [AuthenticatedSessionController::class, 'create'])
+            ->middleware('guest:admin')
+            ->name('login');
 
-Route::get('/login', [AuthenticatedSessionController::class, 'create'])
-    ->middleware('guest')
-    ->name('login');
+        $router->post('/login', [AuthenticatedSessionController::class, 'store'])
+            ->middleware('guest:admin');
 
-Route::post('/login', [AuthenticatedSessionController::class, 'store'])
-    ->middleware('guest');
+        $router->get('/verify-email', [EmailVerificationPromptController::class, '__invoke'])
+            ->middleware('auth:admin')
+            ->name('verification.notice');
 
-Route::get('/verify-email', [EmailVerificationPromptController::class, '__invoke'])
-    ->middleware('auth')
-    ->name('verification.notice');
+        $router->get('/verify-email/{id}/{hash}', [VerifyEmailController::class, '__invoke'])
+            ->middleware(['auth:admin', 'signed', 'throttle:6,1'])
+            ->name('verification.verify');
 
-Route::get('/verify-email/{id}/{hash}', [VerifyEmailController::class, '__invoke'])
-    ->middleware(['auth', 'signed', 'throttle:6,1'])
-    ->name('verification.verify');
+        $router->post('/email/verification-notification', [EmailVerificationNotificationController::class, 'store'])
+            ->middleware(['auth:admin', 'throttle:6,1'])
+            ->name('verification.send');
 
-Route::post('/email/verification-notification', [EmailVerificationNotificationController::class, 'store'])
-    ->middleware(['auth', 'throttle:6,1'])
-    ->name('verification.send');
-
-Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
-    ->middleware('auth')
-    ->name('logout');
+        $router->post('/logout', [AuthenticatedSessionController::class, 'destroy'])
+            ->middleware('auth:admin')
+            ->name('logout');
+    });

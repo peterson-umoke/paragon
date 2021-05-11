@@ -5,14 +5,14 @@ namespace App\Http\Middleware;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 
-class UserHandleInertiaRequests extends Middleware
+class HandleInertiaRequests_Admin extends Middleware
 {
     /**
      * The root template that is loaded on the first page visit.
      *
      * @var string
      */
-    protected $rootView = 'layouts.user';
+    protected $rootView = 'admin';
 
     /**
      * Determine the current asset version.
@@ -35,7 +35,7 @@ class UserHandleInertiaRequests extends Middleware
     {
         return array_merge(parent::share($request), [
             'auth' => [
-                'user' => $request->user(),
+                'user' => $request->user('admin'),
             ],
         ]);
     }

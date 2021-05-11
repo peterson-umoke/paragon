@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\Route;
 | Admin Web Routes
 |--------------------------------------------------------------------------
 */
-Route::middleware(['auth', 'verified'])
+Route::middleware(['auth:admin', 'verified', 'inertia.admin'])
     ->prefix('admin')
     ->name("admin.")
-    ->group(static function () {
-        Route::get('/', [\App\Http\Controllers\Admin\DashboardController::class, '__invoke'])->name('dashboard');
+    ->group(static function (\Illuminate\Routing\Router $router) {
+        $router->get('/', [\App\Http\Controllers\Admin\DashboardController::class, '__invoke'])->name('dashboard');
     });
