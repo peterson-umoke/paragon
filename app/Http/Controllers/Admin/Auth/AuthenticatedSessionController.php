@@ -28,7 +28,7 @@ class AuthenticatedSessionController extends Controller
     /**
      * Handle an incoming authentication request.
      *
-     * @param  \App\Http\Requests\Auth\AdminLoginRequest  $request
+     * @param \App\Http\Requests\Auth\AdminLoginRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(AdminLoginRequest $request)
@@ -43,16 +43,16 @@ class AuthenticatedSessionController extends Controller
     /**
      * Destroy an authenticated session.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy(Request $request)
     {
-        Auth::guard('web')->logout();
+        Auth::guard('admin')->logout();
 
-        $request->session()->invalidate();
+//        $request->session()->invalidate();
 
-        $request->session()->regenerateToken();
+//        $request->session()->regenerateToken();
 
         return redirect('/');
     }
