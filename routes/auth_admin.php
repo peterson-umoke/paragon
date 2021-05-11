@@ -17,18 +17,18 @@ Route::prefix('admin')
             ->middleware('guest:admin');
 
         $router->get('/verify-email', [EmailVerificationPromptController::class, '__invoke'])
-            ->middleware('auth:admin')
+            ->middleware('auth.admin:admin')
             ->name('verification.notice');
 
         $router->get('/verify-email/{id}/{hash}', [VerifyEmailController::class, '__invoke'])
-            ->middleware(['auth:admin', 'signed', 'throttle:6,1'])
+            ->middleware(['auth.admin:admin', 'signed', 'throttle:6,1'])
             ->name('verification.verify');
 
         $router->post('/email/verification-notification', [EmailVerificationNotificationController::class, 'store'])
-            ->middleware(['auth:admin', 'throttle:6,1'])
+            ->middleware(['auth.admin:admin', 'throttle:6,1'])
             ->name('verification.send');
 
         $router->post('/logout', [AuthenticatedSessionController::class, 'destroy'])
-            ->middleware('auth:admin')
+            ->middleware('auth.admin:admin')
             ->name('logout');
     });
