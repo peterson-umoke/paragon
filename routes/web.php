@@ -15,3 +15,11 @@ require __DIR__ . '/auth_admin.php';
 require __DIR__ . '/auth_user.php';
 require __DIR__ . '/web_user.php';
 require __DIR__ . '/web_admin.php';
+
+
+/*
+|--------------------------------------------------------------------------
+| Guest Web Routes
+|--------------------------------------------------------------------------
+*/
+Route::get('/', [\App\Http\Controllers\WelcomeController::class, '__invoke'])->name("welcome");

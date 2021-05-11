@@ -1,15 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
-class DashboardController extends Controller
+class WelcomeController extends Controller
 {
-    public function index()
+    public function __invoke()
     {
         return inertia()->render('Welcome', [
             'canLogin' => Route::has('login'),
@@ -17,10 +15,5 @@ class DashboardController extends Controller
             'laravelVersion' => Application::VERSION,
             'phpVersion' => PHP_VERSION,
         ]);
-    }
-
-    public function show()
-    {
-        return Inertia::render('Dashboard');
     }
 }

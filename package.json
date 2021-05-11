@@ -1,13 +1,13 @@
 {
     "private": true,
     "scripts": {
-        "dev": "npm run development",
-        "development": "mix",
-        "watch": "mix watch",
-        "watch-poll": "mix watch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot",
-        "prod": "npm run production",
-        "production": "mix --production"
+        "user:dev": "npm run development",
+        "user:development": "mix",
+        "user:watch": "mix watch",
+        "user:watch-poll": "mix watch -- --watch-options-poll=1000",
+        "user:hot": "mix watch --hot",
+        "user:prod": "npm run production",
+        "user:production": "mix --production"
     },
     "devDependencies": {
         "@inertiajs/inertia": "^0.8.4",
