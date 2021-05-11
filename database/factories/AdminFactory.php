@@ -38,7 +38,7 @@ class AdminFactory extends Factory
      */
     public function password($password): AdminFactory
     {
-        return $this->state(fn(array $attrs) => ['password' => $password]);
+        return $this->state(fn(array $attrs) => ['password' => bcrypt($password)]);
     }
 
     /**
