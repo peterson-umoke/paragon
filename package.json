@@ -2,19 +2,19 @@
     "private": true,
     "scripts": {
         "user:dev": "npm run development",
-        "user:development": "mix --mix-config=build/webpack_user.mix.js",
-        "user:watch": "mix watch --mix-config=build/webpack_user.mix.js",
+        "user:development": "mix --mix-config=webpack_user.mix.js",
+        "user:watch": "mix watch --mix-config=webpack_user.mix.js",
         "user:watch-poll": "mix watch -- --watch-options-poll=1000",
         "user:hot": "mix watch --hot",
         "user:prod": "npm run production",
-        "user:production": "mix --mix-config=build/webpack_user.mix.js --production",
+        "user:production": "mix --mix-config=webpack_user.mix.js --production",
         "admin:dev": "npm run development",
-        "admin:development": "mix --mix-config=build/webpack_admin.mix.js",
-        "admin:watch": "mix watch --mix-config=build/webpack_admin.mix.js",
+        "admin:development": "mix --mix-config=webpack_admin.mix.js",
+        "admin:watch": "mix watch --mix-config=webpack_admin.mix.js",
         "admin:watch-poll": "mix watch -- --watch-options-poll=1000",
         "admin:hot": "mix watch --hot",
         "admin:prod": "npm run production",
-        "admin:production": "mix --mix-config=build/webpack_admin.mix.js --production"
+        "admin:production": "mix --mix-config=webpack_admin.mix.js --production"
     },
     "devDependencies": {
         "@inertiajs/inertia": "^0.8.4",
