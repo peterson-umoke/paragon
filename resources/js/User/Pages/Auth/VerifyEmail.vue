@@ -13,7 +13,7 @@
                 Resend Verification Email
             </breeze-button>
 
-            <inertia-link :href="route('logout')" method="post" as="button" class="underline text-sm text-gray-600 hover:text-gray-900">Log Out</inertia-link>
+            <inertia-link :href="route('user.logout')" method="post" as="button" class="underline text-sm text-gray-600 hover:text-gray-900">Log Out</inertia-link>
         </div>
     </form>
 </template>
@@ -43,7 +43,7 @@
 
         methods: {
             submit() {
-                this.form.post(this.route('verification.send'))
+                this.form.post(this.route('user.verification.send'))
             },
         },
 

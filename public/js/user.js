@@ -17834,7 +17834,7 @@ __webpack_require__.r(__webpack_exports__);
     submit: function submit() {
       var _this = this;
 
-      this.form.post(this.route('password.confirm'), {
+      this.form.post(this.route('user.password.confirm'), {
         onFinish: function onFinish() {
           return _this.form.reset();
         }
@@ -17888,7 +17888,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     submit: function submit() {
-      this.form.post(this.route('password.email'));
+      this.form.post(this.route('user.password.email'));
     }
   }
 });
@@ -17946,7 +17946,7 @@ __webpack_require__.r(__webpack_exports__);
     submit: function submit() {
       var _this = this;
 
-      this.form.post(this.route('login'), {
+      this.form.post(this.route('user.login'), {
         onFinish: function onFinish() {
           return _this.form.reset('password');
         }
@@ -18005,7 +18005,7 @@ __webpack_require__.r(__webpack_exports__);
     submit: function submit() {
       var _this = this;
 
-      this.form.post(this.route('register'), {
+      this.form.post(this.route('user.register'), {
         onFinish: function onFinish() {
           return _this.form.reset('password', 'password_confirmation');
         }
@@ -18065,7 +18065,7 @@ __webpack_require__.r(__webpack_exports__);
     submit: function submit() {
       var _this = this;
 
-      this.form.post(this.route('password.update'), {
+      this.form.post(this.route('user.password.update'), {
         onFinish: function onFinish() {
           return _this.form.reset('password', 'password_confirmation');
         }
@@ -18108,7 +18108,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     submit: function submit() {
-      this.form.post(this.route('verification.send'));
+      this.form.post(this.route('user.verification.send'));
     }
   },
   computed: {
@@ -18625,7 +18625,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_breeze_responsive_nav_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("breeze-responsive-nav-link");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("nav", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Primary Navigation Menu "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Logo "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
-    href: _ctx.route('dashboard')
+    href: _ctx.route('user.dashboard')
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_breeze_application_logo, {
@@ -18638,7 +18638,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8
   /* PROPS */
   , ["href"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Navigation Links "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_breeze_nav_link, {
-    href: _ctx.route('dashboard'),
+    href: _ctx.route('user.dashboard'),
     active: _ctx.route().current('dashboard')
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -18660,7 +18660,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     content: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_breeze_dropdown_link, {
-        href: _ctx.route('logout'),
+        href: _ctx.route('user.logout'),
         method: "post",
         as: "button"
       }, {
@@ -18710,7 +18710,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       'hidden': !$data.showingNavigationDropdown
     }, "sm:hidden"]
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_breeze_responsive_nav_link, {
-    href: _ctx.route('dashboard'),
+    href: _ctx.route('user.dashboard'),
     active: _ctx.route().current('dashboard')
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -18726,7 +18726,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.$page.props.auth.user.email), 1
   /* TEXT */
   )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_breeze_responsive_nav_link, {
-    href: _ctx.route('logout'),
+    href: _ctx.route('user.logout'),
     method: "post",
     as: "button"
   }, {
@@ -19054,7 +19054,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* PROPS */
   , ["checked"]), _hoisted_5])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_6, [$props.canResetPassword ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_inertia_link, {
     key: 0,
-    href: _ctx.route('password.request'),
+    href: _ctx.route('user.password.request'),
     "class": "underline text-sm text-gray-600 hover:text-gray-900"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -19197,7 +19197,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, 8
   /* PROPS */
   , ["modelValue"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
-    href: _ctx.route('login'),
+    href: _ctx.route('user.login'),
     "class": "underline text-sm text-gray-600 hover:text-gray-900"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -19396,7 +19396,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8
   /* PROPS */
   , ["class", "disabled"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
-    href: _ctx.route('logout'),
+    href: _ctx.route('user.logout'),
     method: "post",
     as: "button",
     "class": "underline text-sm text-gray-600 hover:text-gray-900"
@@ -19710,7 +19710,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
   })) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     key: 1
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
-    href: _ctx.route('login'),
+    href: _ctx.route('user.login'),
     "class": "text-sm text-gray-700 underline"
   }, {
     "default": _withId(function () {
@@ -19723,7 +19723,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
   /* PROPS */
   , ["href"]), $props.canRegister ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_inertia_link, {
     key: 0,
-    href: _ctx.route('register'),
+    href: _ctx.route('user.register'),
     "class": "ml-4 text-sm text-gray-700 underline"
   }, {
     "default": _withId(function () {

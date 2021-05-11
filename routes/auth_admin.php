@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')
+    ->middleware(['inertia.admin'])
     ->name("admin.")
     ->group(static function (\Illuminate\Routing\Router $router) {
         $router->get('/login', [AuthenticatedSessionController::class, 'create'])

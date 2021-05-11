@@ -8,14 +8,14 @@
                         <div class="flex">
                             <!-- Logo -->
                             <div class="flex-shrink-0 flex items-center">
-                                <inertia-link :href="route('dashboard')">
+                                <inertia-link :href="route('admin.dashboard')">
                                     <breeze-application-logo class="block h-9 w-auto" />
                                 </inertia-link>
                             </div>
 
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <breeze-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
+                                <breeze-nav-link :href="route('admin.dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </breeze-nav-link>
                             </div>
@@ -38,7 +38,7 @@
                                     </template>
 
                                     <template #content>
-                                        <breeze-dropdown-link :href="route('logout')" method="post" as="button">
+                                        <breeze-dropdown-link :href="route('admin.logout')" method="post" as="button">
                                             Log Out
                                         </breeze-dropdown-link>
                                     </template>
@@ -61,7 +61,7 @@
                 <!-- Responsive Navigation Menu -->
                 <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
-                        <breeze-responsive-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
+                        <breeze-responsive-nav-link :href="route('admin.dashboard')" :active="route().current('dashboard')">
                             Dashboard
                         </breeze-responsive-nav-link>
                     </div>
@@ -74,7 +74,7 @@
                         </div>
 
                         <div class="mt-3 space-y-1">
-                            <breeze-responsive-nav-link :href="route('logout')" method="post" as="button">
+                            <breeze-responsive-nav-link :href="route('admin.logout')" method="post" as="button">
                                 Log Out
                             </breeze-responsive-nav-link>
                         </div>
