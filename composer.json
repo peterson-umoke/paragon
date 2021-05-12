@@ -72,6 +72,20 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta"
+        ],
+        "generate-models": [
+            "@php artisan ide-helper:models -W"
+        ],
+        "generate-meta": [
+            "@php artisan ide-helper:meta"
+        ],
+        "generate-helpers": [
+            "@php artisan ide-helper:generate"
         ]
     },
     "extra": {
