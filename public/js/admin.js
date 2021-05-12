@@ -17532,6 +17532,17 @@ __webpack_require__.r(__webpack_exports__);
     return {
       showingNavigationDropdown: false
     };
+  },
+  created: function created() {
+    Echo.join("chat").here(function (users) {
+      console.log(users); // alert('hello');
+    }).joining(function (user) {
+      console.log(user.name);
+    }).leaving(function (user) {
+      console.log(user.name);
+    }).error(function (error) {
+      console.error(error);
+    });
   }
 });
 
