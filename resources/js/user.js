@@ -19,7 +19,7 @@ createApp({
     .use(InertiaPlugin)
     .use(VueMeta, {
         metaInfo: {
-            titleTemplate: (title) => title ? `${title} - ${process.env.APP_NAME}` : `${process.env.APP_NAME}`
+            titleTemplate: (title) => title ? `${title} - Portal - ${process.env.APP_NAME}` : `Portal - ${process.env.APP_NAME}`
         }
     })
     .mount(el);
