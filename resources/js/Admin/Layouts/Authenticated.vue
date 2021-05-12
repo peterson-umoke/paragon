@@ -119,7 +119,7 @@
             }
         },
         created() {
-            Echo.join(`chat`)
+            Echo.join(`chat.admin`)
                 .here((users) => {
                     console.log(users);
                     // alert('hello');

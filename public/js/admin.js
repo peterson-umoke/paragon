@@ -17534,7 +17534,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   created: function created() {
-    Echo.join("chat").here(function (users) {
+    Echo.join("chat.admin").here(function (users) {
       console.log(users); // alert('hello');
     }).joining(function (user) {
       console.log(user.name);
