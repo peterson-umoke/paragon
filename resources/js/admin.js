@@ -1,9 +1,10 @@
-require('./bootstrap');
-
 // Import modules...
+import VueMeta from "vue-meta";
 import {createApp, h} from 'vue';
 import {App as InertiaApp, plugin as InertiaPlugin} from '@inertiajs/inertia-vue3';
 import {InertiaProgress} from '@inertiajs/progress';
+
+require('./bootstrap');
 
 const el = document.getElementById('app');
 
@@ -16,6 +17,11 @@ createApp({
 })
     .mixin({methods: {route}})
     .use(InertiaPlugin)
+    .use(VueMeta, {
+        metaInfo: {
+            titleTemplate: (title) => title ? `${title} - Admin Portal - ${process.env.APP_NAME}` : `Admin Portal - ${process.env.APP_NAME}`
+        }
+    })
     .mount(el);
 
 InertiaProgress.init({color: '#4B5563'});
