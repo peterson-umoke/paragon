@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         // default and dummy users
         User::factory()->email('user@app.com')->create();
-        User::factory(14)->email('user@app.com')->create();
+        User::factory(14)->create();
 
         // default and dummy admins
         Admin::factory()->email('super@app.com')->create();
