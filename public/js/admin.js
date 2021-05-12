@@ -18808,6 +18808,11 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 var el = document.getElementById('app');
 (0,vue__WEBPACK_IMPORTED_MODULE_1__.createApp)({
+  metaInfo: {
+    titleTemplate: function titleTemplate(title) {
+      return title ? "".concat(title, " - Admin Portal - ").concat(process.env.APP_NAME) : "Admin Portal - ".concat(process.env.APP_NAME);
+    }
+  },
   render: function render() {
     return (0,vue__WEBPACK_IMPORTED_MODULE_1__.h)(_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_2__.App, {
       initialPage: JSON.parse(el.dataset.page),
@@ -18820,13 +18825,8 @@ var el = document.getElementById('app');
   methods: {
     route: route
   }
-}).use(_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_2__.plugin).use(vue_meta__WEBPACK_IMPORTED_MODULE_0__.default, {
-  metaInfo: {
-    titleTemplate: function titleTemplate(title) {
-      return title ? "".concat(title, " - Admin Portal - ").concat(process.env.APP_NAME) : "Admin Portal - ".concat(process.env.APP_NAME);
-    }
-  }
-}).mount(el);
+}).use(_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_2__.plugin) // .use(VueMeta)
+.mount(el);
 _inertiajs_progress__WEBPACK_IMPORTED_MODULE_3__.InertiaProgress.init({
   color: '#4B5563'
 });

@@ -9,6 +9,9 @@ require('./bootstrap');
 const el = document.getElementById('app');
 
 createApp({
+    metaInfo: {
+        titleTemplate: (title) => title ? `${title} - Admin Portal - ${process.env.APP_NAME}` : `Admin Portal - ${process.env.APP_NAME}`
+    },
     render: () =>
         h(InertiaApp, {
             initialPage: JSON.parse(el.dataset.page),
@@ -17,11 +20,7 @@ createApp({
 })
     .mixin({methods: {route}})
     .use(InertiaPlugin)
-    .use(VueMeta, {
-        metaInfo: {
-            titleTemplate: (title) => title ? `${title} - Admin Portal - ${process.env.APP_NAME}` : `Admin Portal - ${process.env.APP_NAME}`
-        }
-    })
+    // .use(VueMeta)
     .mount(el);
 
 InertiaProgress.init({color: '#4B5563'});

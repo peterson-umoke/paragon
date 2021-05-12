@@ -9,19 +9,18 @@ require('./bootstrap');
 const el = document.getElementById('app');
 
 createApp({
+    metaInfo: {
+        titleTemplate: (title) => title ? `${title} - Portal - ${process.env.APP_NAME}` : `Portal - ${process.env.APP_NAME}`
+    },
     render: () =>
         h(InertiaApp, {
             initialPage: JSON.parse(el.dataset.page),
             resolveComponent: (name) => require(`./User/Pages/${name}`).default,
         }),
 })
-    .mixin({ methods: { route } })
+    .mixin({methods: {route}})
+    // .use(VueMeta)
     .use(InertiaPlugin)
-    .use(VueMeta, {
-        metaInfo: {
-            titleTemplate: (title) => title ? `${title} - Portal - ${process.env.APP_NAME}` : `Portal - ${process.env.APP_NAME}`
-        }
-    })
     .mount(el);
 
-InertiaProgress.init({ color: '#4B5563' });
+InertiaProgress.init({color: '#4B5563'});
