@@ -15,8 +15,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory(10)->email('user@app.com')->create();
+        // default and dummy users
+        User::factory()->email('user@app.com')->create();
+        User::factory(14)->email('user@app.com')->create();
+
+        // default and dummy admins
         Admin::factory()->email('super@app.com')->create();
-        Admin::factory()->count(9)->create();
+        Admin::factory(9)->create();
     }
 }

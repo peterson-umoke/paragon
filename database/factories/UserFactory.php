@@ -32,6 +32,24 @@ class UserFactory extends Factory
     }
 
     /**
+     * @param $email
+     * @return UserFactory
+     */
+    public function email($email): UserFactory
+    {
+        return $this->state(fn(array $attrs) => ['email' => $email]);
+    }
+
+    /**
+     * @param $email
+     * @return UserFactory
+     */
+    public function name($name): UserFactory
+    {
+        return $this->state(fn(array $attrs) => ['name' => $name]);
+    }
+
+    /**
      * Indicate that the model's email address should be unverified.
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
