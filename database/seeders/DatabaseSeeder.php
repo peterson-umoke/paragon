@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Admin;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,8 +15,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-        Admin::factory()->email('super@app.com')->password('password')->create();
+        User::factory(10)->email('user@app.com')->create();
+        Admin::factory()->email('super@app.com')->create();
         Admin::factory()->count(9)->create();
     }
 }
