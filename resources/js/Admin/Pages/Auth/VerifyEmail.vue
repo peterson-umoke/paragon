@@ -20,7 +20,7 @@
 
 <script>
     import BreezeButton from '@/Components/Button'
-    import BreezeGuestLayout from "@/User/Layouts/Guest"
+    import BreezeGuestLayout from "@/Admin/Layouts/Guest"
 
     export default {
         layout: BreezeGuestLayout,

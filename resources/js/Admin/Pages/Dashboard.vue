@@ -2,7 +2,7 @@
     <breeze-authenticated-layout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Dashboard
+                Admin Dashboard
             </h2>
         </template>
 
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-    import BreezeAuthenticatedLayout from '@/User/Layouts/Authenticated'
+    import BreezeAuthenticatedLayout from '@/Admin/Layouts/Authenticated'
 
     export default {
         components: {

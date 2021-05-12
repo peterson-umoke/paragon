@@ -33,6 +33,7 @@
         "pusher-js": "^7.0.3",
         "tailwindcss": "^2.0.3",
         "vue": "^3.0.5",
-        "vue-loader": "^16.1.2"
+        "vue-loader": "^16.1.2",
+        "vue-meta": "^2.4.0"
     }
 }

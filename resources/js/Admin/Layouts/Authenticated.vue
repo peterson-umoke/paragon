@@ -61,7 +61,7 @@
                 <!-- Responsive Navigation Menu -->
                 <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
-                        <breeze-responsive-nav-link :href="route('admin.dashboard')" :active="route().current('dashboard')">
+                        <breeze-responsive-nav-link :href="route('admin.dashboard')" :active="route().current('admin.dashboard')">
                             Dashboard
                         </breeze-responsive-nav-link>
                     </div>

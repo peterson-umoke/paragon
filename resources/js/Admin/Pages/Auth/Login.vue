@@ -33,7 +33,7 @@
 
 <script>
     import BreezeButton from '@/Components/Button'
-    import BreezeGuestLayout from "@/User/Layouts/Guest"
+    import BreezeGuestLayout from "@/Admin/Layouts/Guest"
     import BreezeInput from '@/Components/Input'
     import BreezeCheckbox from '@/Components/Checkbox'
     import BreezeLabel from '@/Components/Label'
