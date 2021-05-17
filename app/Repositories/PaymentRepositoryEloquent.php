@@ -2,11 +2,9 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
+use App\Models\Payment;
 use Prettus\Repository\Criteria\RequestCriteria;
-use App\Repositories\PaymentRepository;
-use App\Entities\Payment;
-use App\Validators\PaymentValidator;
+use Prettus\Repository\Eloquent\BaseRepository;
 
 /**
  * Class PaymentRepositoryEloquent.
@@ -25,7 +23,7 @@ class PaymentRepositoryEloquent extends BaseRepository implements PaymentReposit
         return Payment::class;
     }
 
-    
+
 
     /**
      * Boot up the repository, pushing criteria
@@ -34,5 +32,5 @@ class PaymentRepositoryEloquent extends BaseRepository implements PaymentReposit
     {
         $this->pushCriteria(app(RequestCriteria::class));
     }
-    
+
 }

@@ -5,7 +5,7 @@ namespace App\Repositories;
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
 use App\Repositories\AdminRepository;
-use App\Entities\Admin;
+use App\Models\Admin;
 use App\Validators\AdminValidator;
 
 /**
@@ -25,7 +25,7 @@ class AdminRepositoryEloquent extends BaseRepository implements AdminRepository
         return Admin::class;
     }
 
-    
+
 
     /**
      * Boot up the repository, pushing criteria
@@ -34,5 +34,5 @@ class AdminRepositoryEloquent extends BaseRepository implements AdminRepository
     {
         $this->pushCriteria(app(RequestCriteria::class));
     }
-    
+
 }
