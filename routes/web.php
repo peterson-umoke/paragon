@@ -11,6 +11,8 @@
 |
 */
 
+$baseUrl = str_replace(['http://', 'https://'], '', config('app.url'));
+
 require __DIR__ . '/auth_admin.php';
 require __DIR__ . '/auth_user.php';
 require __DIR__ . '/web_user.php';

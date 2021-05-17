@@ -11,6 +11,7 @@ use App\Http\Controllers\User\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
 Route::name("user.")
+    ->domain(sprintf("portal.%s", $baseUrl))
     ->group(static function (\Illuminate\Routing\Router $router) {
         Route::get('/register', [RegisteredUserController::class, 'create'])
             ->middleware('guest')

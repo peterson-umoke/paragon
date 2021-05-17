@@ -6,8 +6,8 @@ use App\Http\Controllers\Admin\Auth\EmailVerificationPromptController;
 use App\Http\Controllers\Admin\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('admin')
-    ->middleware(['inertia.admin'])
+Route::middleware(['inertia.admin'])
+    ->domain(sprintf("admin.%s", $baseUrl))
     ->name("admin.")
     ->group(static function (\Illuminate\Routing\Router $router) {
         $router->get('/login', [AuthenticatedSessionController::class, 'create'])
