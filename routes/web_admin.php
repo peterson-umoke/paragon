@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 
+$baseUrl = str_replace(['http://', 'https://'], '', config('app.url'));
 Route::middleware(['auth.admin:admin', 'verified.admin', 'inertia.admin'])
     ->domain(sprintf("admin.%s", $baseUrl))
     ->name("admin.")

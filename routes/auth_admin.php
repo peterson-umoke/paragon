@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\Auth\EmailVerificationPromptController;
 use App\Http\Controllers\Admin\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
+$baseUrl = str_replace(['http://', 'https://'], '', config('app.url'));
 Route::middleware(['inertia.admin'])
     ->domain(sprintf("admin.%s", $baseUrl))
     ->name("admin.")
