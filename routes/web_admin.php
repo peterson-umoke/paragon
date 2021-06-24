@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 $baseUrl = str_replace(['http://', 'https://'], '', config('app.url'));
 Route::middleware(['auth.admin:admin', 'verified.admin', 'inertia.admin'])
-    ->domain(sprintf("admin.%s", $baseUrl))
+    ->domain(sprintf("%s%s", "admin.", $baseUrl))
     ->name("admin.")
     ->group(static function (\Illuminate\Routing\Router $router) {
         $router->get('/', [\App\Http\Controllers\Admin\DashboardController::class, '__invoke'])->name('dashboard');
