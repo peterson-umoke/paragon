@@ -20,4 +20,34 @@ class Meta extends Model
     {
         return $this->morphTo();
     }
+
+    /**
+     * @param $query
+     * @param string $key
+     * @return mixed
+     */
+    public function scopeKey($query, string $key = ""): mixed
+    {
+        return $query->where('key', $key);
+    }
+
+    /**
+     * @param $query
+     * @param string $group
+     * @return mixed
+     */
+    public function scopeGroup($query, string $group = ""): mixed
+    {
+        return $query->where('group', $group);
+    }
+
+    /**
+     * @param $query
+     * @param string $value
+     * @return mixed
+     */
+    public function scopeValue($query, string $value = ""): mixed
+    {
+        return $query->where('value', 'like', sprintf("%%%s%%", $value));
+    }
 }
